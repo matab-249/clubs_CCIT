@@ -13,7 +13,6 @@
     direction: rtl;
   }
 
-  /* خلفية صفحة الاستكشاف */
   .hero {
     height: 100vh;
     background: url('absolute.jpg') center/cover no-repeat;
@@ -25,17 +24,17 @@
   }
 
   .hero h1 {
-    font-size: 120px; /* كلمة استكشف كبيرة */
+    font-size: 120px;
     color: white;
     margin-bottom: 40px;
   }
 
   .btn {
-    padding: 25px 70px; /* تكبير الزر */
+    padding: 25px 70px;
     background: #ffffffcc;
     color: black;
     border-radius: 15px;
-    font-size: 35px; /* تكبير الخط */
+    font-size: 35px;
     cursor: pointer;
     border: none;
     font-weight: bold;
@@ -71,13 +70,29 @@
     object-fit: contain;
   }
 
+  /* خانة التسجيل — مكبرة */
   .register-box {
     display: none;
     margin-top: 30px;
     background: #222;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px;
     text-align: center;
+  }
+
+  .register-box h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  #registerLink {
+    font-size: 35px;
+    padding: 20px 40px;
+    background: #4ea3ff;
+    color: black !important;
+    border-radius: 15px;
+    display: inline-block;
+    font-weight: bold;
   }
 
   a {
@@ -181,7 +196,7 @@
 
   <div id="registerBox" class="register-box">
     <h3>رابط التسجيل</h3>
-    <a id="registerLink" href="#" target="_blank" style="color:#4ea3ff;">اضغط هنا للتسجيل</a>
+    <a id="registerLink" href="#" target="_blank">اضغط هنا للتسجيل</a>
   </div>
 
 </div>
