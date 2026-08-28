@@ -1,98 +1,180 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>نوادي كلية الحاسبات</title>
+<meta charset="UTF-8">
+<title>نوادي كلية الحاسبات</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Tahoma, Arial;
+    background: black;
+    color: white;
+    direction: rtl;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px;
+    background: #ffffffcc;
+    color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .clubs {
+    display: none;
+    padding: 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .register-box {
+    display: none;
+    margin-top: 30px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  a {
+    color: #4ea3ff;
+  }
+</style>
+
 </head>
+<body>
 
-<body style="margin:0; font-family:Tahoma, Arial; background:black; color:white; direction:rtl;">
+<h1>نوادي كلية الحاسبات</h1>
 
-  <h1 style="text-align:center; margin-top:40px;">نوادي كلية الحاسبات</h1>
-  <p style="text-align:center;">اختر النادي الذي يناسبك:</p>
+<button class="btn" onclick="showClubs()">اضغط للاستكشاف</button>
 
-  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; padding:30px;">
+<div id="clubs" class="clubs">
+
+  <div class="grid">
 
     <!-- GDGoC -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="gdgoc.png" alt="GDGoC TU" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="gdgoc.png">
       <h3>نادي قوقل للطلبة المطورين – GDGoC TU</h3>
       <p>مجتمع تقني يهتم بتطوير مهارات الطلاب في البرمجة، التقنية، وحلول Google.</p>
-      <a href="https://linktr.ee/DSCTaif12" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- GDC -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="gdc.png" alt="GDC Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="gdc.png">
       <h3>نادي تطوير الألعاب الإلكترونية – GDC</h3>
       <p>نادي متخصص في تطوير الألعاب، البرمجة، التصميم، وصناعة التجارب التفاعلية.</p>
-      <a href="https://linktr.ee/GDCTaif" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- Athar -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="athar.png" alt="Athar Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="athar.png">
       <h3>نادي أثر التقني – Athar Club</h3>
       <p>نادي تقني يهدف إلى تمكين الطلاب في مجالات التقنية، الابتكار، وصناعة الحلول الرقمية.</p>
-      <a href="https://athar-club.com/" target="_blank" style="color:#4ea3ff;">موقع النادي</a>
     </div>
 
     <!-- PAIC -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="paic.png" alt="PAIC Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="paic.png">
       <h3>نادي البرمجة والذكاء الاصطناعي – PAIC Club</h3>
       <p>نادي متخصص في البرمجة، الذكاء الاصطناعي، تطوير المهارات التقنية، وصناعة الحلول الذكية.</p>
-      <a href="https://linktr.ee/paictaifuni" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- TCC -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="tcc.png" alt="TCC Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="tcc.png">
       <h3>نادي الاستشارات التقنية – TCC</h3>
       <p>نادي متخصص في تقديم الاستشارات التقنية، تطوير الحلول، وتمكين الطلاب في مجالات التقنية الحديثة.</p>
-      <a href="https://t.co/1d3tJ8z8js" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- Robotics -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="robotics.png" alt="Robotics Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="robotics.png">
       <h3>نادي هندسة الروبوتات – Robotics Engineering Club</h3>
       <p>نادي متخصص في هندسة الروبوتات، الأنظمة الذكية، وتصميم الحلول الميكانيكية والإلكترونية.</p>
-      <a href="https://t.co/BgSm2GphwZ" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- Cyber -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="cyber.png" alt="Cyber Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="cyber.png">
       <h3>نادي الأمن السيبراني – TU Cyber Security Club</h3>
       <p>نادي متخصص في الأمن السيبراني، حماية الأنظمة، التوعية الأمنية، وتحليل التهديدات الرقمية.</p>
-      <a href="https://t.co/GBrxSN9t6J" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- IEEE -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="ieee.png" alt="IEEE Student Branch" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="ieee.png">
       <h3>نادي IEEE الفرع التقني – IEEE Student Branch</h3>
       <p>نادي متخصص في الهندسة، التقنية، الابتكار، وتنمية مهارات الطلاب في المجالات العلمية الحديثة.</p>
-      <a href="https://t.co/mmH1ptWT8U" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- Oracle -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="oracle.png" alt="Oracle Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+      <img src="oracle.png">
       <h3>نادي أوراكل – Oracle NextGen Club</h3>
       <p>نادي متخصص في تقنيات أوراكل، قواعد البيانات، التحول الرقمي، وتمكين الطلاب في حلول المؤسسات.</p>
-      <a href="https://t.co/wff8aSwypN" target="_blank" style="color:#4ea3ff;">حسابات النادي</a>
     </div>
 
     <!-- Sport -->
-    <div style="background:#111; padding:15px; border-radius:10px; text-align:center;">
-      <img src="sport.png" alt="Sport Club" style="width:100%; height:120px; object-fit:contain;">
+    <div class="card" onclick="showLink('https://t.co/dVZboRYKiD')">
+      <img src="sport.png">
       <h3>نادي الرياضة بكلية الحاسبات – CIT Sport Club</h3>
       <p>نادي يهتم بالأنشطة الرياضية، تعزيز اللياقة، وتنظيم فعاليات تنافسية لطلاب الكلية.</p>
-      <a href="https://x.com/CITSportClub" target="_blank" style="color:#4ea3ff;">حساب النادي</a>
     </div>
 
   </div>
+
+  <div id="registerBox" class="register-box">
+    <h3>رابط التسجيل</h3>
+    <a id="registerLink" href="#" target="_blank" style="color:#4ea3ff;">اضغط هنا للتسجيل</a>
+  </div>
+
+</div>
+
+<script>
+  function showClubs() {
+    document.getElementById("clubs").style.display = "block";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+
+  function showLink(url) {
+    document.getElementById("registerBox").style.display = "block";
+    document.getElementById("registerLink").href = url;
+  }
+</script>
 
 </body>
 </html>
