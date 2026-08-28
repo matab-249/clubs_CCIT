@@ -13,14 +13,23 @@
     direction: rtl;
   }
 
-  h1 {
-    text-align: center;
-    margin-top: 40px;
+  /* خلفية صفحة الاستكشاف */
+  .hero {
+    height: 100vh;
+    background: url('absolute.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px black;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+    color: white;
   }
 
   .btn {
-    display: block;
-    margin: 20px auto;
     padding: 15px 40px;
     background: #ffffffcc;
     color: black;
@@ -77,9 +86,10 @@
 </head>
 <body>
 
-<h1>نوادي كلية الحاسبات</h1>
-
-<button class="btn" onclick="showClubs()">اضغط للاستكشاف</button>
+<div class="hero">
+  <h1>استكشف</h1>
+  <button class="btn" onclick="showClubs()">اضغط للاستكشاف</button>
+</div>
 
 <div id="clubs" class="clubs">
 
