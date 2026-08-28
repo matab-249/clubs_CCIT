@@ -70,37 +70,24 @@
     object-fit: contain;
   }
 
-  /* خانة التسجيل — مكبرة جدًا */
-  .register-box {
-    display: none;
-    margin-top: 50px;
-    background: #1a1a1a;
-    padding: 60px;
-    border-radius: 25px;
+  /* زر التسجيل الكبير */
+  .big-register {
+    margin-top: 60px;
     text-align: center;
-    box-shadow: 0 0 25px #000;
   }
 
-  .register-box h3 {
-    font-size: 55px;
-    margin-bottom: 35px;
-    font-weight: bold;
-  }
-
-  #registerLink {
-    font-size: 45px;
-    padding: 30px 60px;
+  .big-register a {
+    font-size: 50px;
+    padding: 35px 80px;
     background: #4ea3ff;
-    color: black !important;
-    border-radius: 20px;
-    display: inline-block;
+    color: black;
+    border-radius: 25px;
     font-weight: bold;
-    box-shadow: 0 0 15px #4ea3ff;
+    text-decoration: none;
+    box-shadow: 0 0 25px #4ea3ff;
+    display: inline-block;
   }
 
-  a {
-    color: #4ea3ff;
-  }
 </style>
 
 </head>
@@ -116,7 +103,7 @@
   <div class="grid">
 
     <!-- Robotics -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="robotics.png">
       <h3>نادي هندسة الروبوتات</h3>
       <p>نادي متخصص في هندسة الروبوتات والأنظمة الذكية.</p>
@@ -124,7 +111,7 @@
     </div>
 
     <!-- Cyber -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="cyber.png">
       <h3>نادي الأمن السيبراني</h3>
       <p>نادي متخصص في الأمن السيبراني وحماية الأنظمة.</p>
@@ -132,7 +119,7 @@
     </div>
 
     <!-- IEEE -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="ieee.png">
       <h3>نادي IEEE الفرع التقني</h3>
       <p>نادي يهتم بالهندسة والتقنية والابتكار.</p>
@@ -140,7 +127,7 @@
     </div>
 
     <!-- Oracle -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="oracle.png">
       <h3>نادي أوراكل</h3>
       <p>نادي متخصص في تقنيات أوراكل والتحول الرقمي.</p>
@@ -148,7 +135,7 @@
     </div>
 
     <!-- Sport -->
-    <div class="card" onclick="showLink('https://t.co/dVZboRYKiD')">
+    <div class="card">
       <img src="Citsport.png">
       <h3>نادي الرياضة بكلية الحاسبات</h3>
       <p>نادي يهتم بالأنشطة الرياضية والفعاليات التنافسية.</p>
@@ -156,7 +143,7 @@
     </div>
 
     <!-- TCC -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="tcc.png">
       <h3>نادي الاستشارات التقنية</h3>
       <p>نادي متخصص في تقديم الاستشارات التقنية.</p>
@@ -164,7 +151,7 @@
     </div>
 
     <!-- PAIC -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="paic.png">
       <h3>نادي البرمجة والذكاء الاصطناعي</h3>
       <p>نادي متخصص في البرمجة والذكاء الاصطناعي.</p>
@@ -172,7 +159,7 @@
     </div>
 
     <!-- Athar -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="athar.png">
       <h3>نادي أثر التقني</h3>
       <p>نادي تقني يركز على الابتكار وصناعة الحلول.</p>
@@ -180,7 +167,7 @@
     </div>
 
     <!-- GDC -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="gdc.png">
       <h3>نادي تطوير الألعاب الإلكترونية</h3>
       <p>نادي متخصص في تطوير الألعاب وصناعة التجارب التفاعلية.</p>
@@ -188,7 +175,7 @@
     </div>
 
     <!-- Google GDGoC -->
-    <div class="card" onclick="showLink('https://forms.cloud.microsoft/r/ykw6upJw2P')">
+    <div class="card">
       <img src="google.png">
       <h3>نادي قوقل للطلبة المطورين</h3>
       <p>مجتمع تقني يهتم بتطوير مهارات الطلاب في البرمجة والتقنية.</p>
@@ -197,9 +184,11 @@
 
   </div>
 
-  <div id="registerBox" class="register-box">
-    <h3>رابط التسجيل</h3>
-    <a id="registerLink" href="#" target="_blank">اضغط هنا للتسجيل</a>
+  <!-- زر التسجيل الكبير -->
+  <div class="big-register">
+    <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=S6tr4uaXVEexY2D4I36FMfp_5YVO_eRHpY_1r9gbzalUNEU0OVFVUlc3QzMyUjZIOUE4QzM1Q1pWTC4u&route=shorturl" target="_blank">
+      اضغط للتسجيل
+    </a>
   </div>
 
 </div>
@@ -208,11 +197,6 @@
   function showClubs() {
     document.getElementById("clubs").style.display = "block";
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  }
-
-  function showLink(url) {
-    document.getElementById("registerBox").style.display = "block";
-    document.getElementById("registerLink").href = url;
   }
 </script>
 
